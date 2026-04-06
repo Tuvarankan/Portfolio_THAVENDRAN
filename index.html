@@ -3,710 +3,766 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Tuvarankan THAVENDRAN </title>
-  <meta name="description" content="Portfolio de Ton Nom, étudiant en BTS SIO SISR spécialisé en cybersécurité et réseaux.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuvarankan THAVENDRAN</title>
+  <meta name="description" content="Portfolio de Tuvarankan THAVENDRAN, étudiant en BTS SIO SISR spécialisé en cybersécurité et réseaux.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- SCROLL TOP -->
+  <button class="scroll-top" id="scrollTop" title="Retour en haut">↑</button>
+
   <!-- NAVIGATION -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#presentation">Présentation</a></li>
-      <li><a href="#competences">Compétences</a></li>
-      <li><a href="#experiences">Expériences</a></li>
-      <li><a href="#formations">Formations</a></li>
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#veilles">Veilles</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#accueil" class="nav-logo">TT<span>.</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#experiences">Expériences</a></li>
+        <li><a href="#formations">Formations</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#veilles">Veilles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- ACCUEIL -->
   <header id="accueil" class="hero">
-    <div class="overlay"></div>
+    <canvas id="particles"></canvas>
     <div class="hero-content">
-      <h1>Tuvarankan THAVENDRAN</h1>
-      <p class="subtitle">Étudiant en Systèmes, Réseaux & Cybersécurité</p>
-      <p class="hero-text">
-        Actuellement étudiant en deuxième année de BTS Services Informatiques aux Organisations,
-        option SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
+      <div class="hero-tag reveal">BTS SIO — SISR</div>
+      <h1 class="reveal">Tuvarankan <span class="gradient-text">THAVENDRAN</span></h1>
+      <p class="subtitle reveal"><span id="typed"></span><span class="cursor">|</span></p>
+      <p class="hero-text reveal">
+        Étudiant passionné par l'administration des systèmes et réseaux,
+        la cybersécurité et l'automatisation des infrastructures informatiques.
       </p>
-      <p class="hero-text">
-        Je m’intéresse particulièrement à l’administration des systèmes et réseaux,
-        à la cybersécurité ainsi qu’à l’automatisation des infrastructures informatiques.
-      </p>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-target="11">0</span>
+          <span class="stat-label">Projets</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="2">0</span>
+          <span class="stat-label">Stages</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="4">0</span>
+          <span class="stat-label">Veilles</span>
+        </div>
+      </div>
+      <div class="hero-cta reveal">
+        <a href="#projets" class="btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn-secondary">Me contacter</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
     </div>
   </header>
 
   <!-- PRESENTATION -->
-  <section id="presentation" class="section section-light">
-    <h2>Présentation</h2>
-    <div class="card intro-card">
-      <p>
-        Actuellement en deuxième année de BTS SIO option SISR, je me forme à l’administration
-        des infrastructures informatiques, aux réseaux et à la cybersécurité.
-      </p>
-      <p>
-        Au cours de ma formation, j’ai acquis des compétences techniques en administration
-        des systèmes, configuration réseau, virtualisation, gestion des incidents et
-        sécurisation des infrastructures informatiques.
-      </p>
-      <p>
-        Mes stages m’ont permis de découvrir le fonctionnement d’un environnement
-        professionnel et de participer à différentes missions liées à l’assistance
-        utilisateurs, à l’analyse d’infrastructures réseau et à l’automatisation
-        de configurations avec Ansible.
-      </p>
-      <p>
-        Mon objectif est de poursuivre dans le domaine de l’administration systèmes
-        et réseaux ainsi que dans la sécurisation des infrastructures informatiques.
-      </p>
+  <section id="presentation" class="section">
+    <div class="section-container">
+      <div class="section-label reveal">À propos</div>
+      <h2 class="reveal">Présentation</h2>
+      <div class="card reveal">
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Actuellement en deuxième année de BTS SIO option SISR, je me forme à l'administration
+              des infrastructures informatiques, aux réseaux et à la cybersécurité.
+            </p>
+            <p>
+              Au cours de ma formation, j'ai acquis des compétences techniques en administration
+              des systèmes, configuration réseau, virtualisation, gestion des incidents et
+              sécurisation des infrastructures informatiques.
+            </p>
+            <p>
+              Mes stages m'ont permis de découvrir le fonctionnement d'un environnement
+              professionnel et de participer à différentes missions liées à l'assistance
+              utilisateurs, à l'analyse d'infrastructures réseau et à l'automatisation
+              de configurations avec Ansible.
+            </p>
+            <p>
+              Mon objectif est de poursuivre dans le domaine de l'administration systèmes
+              et réseaux ainsi que dans la sécurisation des infrastructures informatiques.
+            </p>
+          </div>
+          <div class="about-tags">
+            <span class="tag">🔧 Administration systèmes</span>
+            <span class="tag">🌐 Réseaux</span>
+            <span class="tag">🔒 Cybersécurité</span>
+            <span class="tag">⚙️ Automatisation</span>
+            <span class="tag">📊 Supervision</span>
+            <span class="tag">🖥️ Virtualisation</span>
+            <span class="tag">📋 Support IT</span>
+            <span class="tag">🐧 Linux</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- COMPETENCES -->
-  <section id="competences" class="section">
-    <h2>Compétences</h2>
+  <section id="competences" class="section section-alt">
+    <div class="section-container">
+      <div class="section-label reveal">Expertise</div>
+      <h2 class="reveal">Compétences</h2>
+      <div class="skills-grid reveal">
 
-    <div class="grid">
-      <div class="card skill-card">
-        <h3>Administration des réseaux</h3>
-        <ul>
-          <li>TCP/IP, DHCP, DNS</li>
-          <li>VLAN, LAN / WAN</li>
-          <li>Routage</li>
-          <li>Configuration de switchs</li>
-        </ul>
-      </div>
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <h3>Administration des réseaux</h3>
+          <ul>
+            <li>TCP/IP, DHCP, DNS</li>
+            <li>VLAN, LAN / WAN</li>
+            <li>Routage</li>
+            <li>Configuration de switchs</li>
+          </ul>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
 
-      <div class="card skill-card">
-        <h3>Systèmes, virtualisation & annuaires</h3>
-        <ul>
-          <li>Windows Server</li>
-          <li>Linux / Debian</li>
-          <li>Active Directory</li>
-          <li>VirtualBox, VMware</li>
-        </ul>
-      </div>
+        <div class="skill-card">
+          <div class="skill-icon">🖥️</div>
+          <h3>Systèmes, virtualisation & annuaires</h3>
+          <ul>
+            <li>Windows Server</li>
+            <li>Linux / Debian</li>
+            <li>Active Directory</li>
+            <li>VirtualBox, VMware</li>
+          </ul>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
 
-      <div class="card skill-card">
-        <h3>Support & assistance utilisateurs</h3>
-        <ul>
-          <li>GLPI</li>
-          <li>Gestion des tickets</li>
-          <li>Installation de postes clients</li>
-          <li>Diagnostic matériel et logiciel</li>
-        </ul>
-      </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎧</div>
+          <h3>Support & assistance utilisateurs</h3>
+          <ul>
+            <li>GLPI</li>
+            <li>Gestion des tickets</li>
+            <li>Installation de postes clients</li>
+            <li>Diagnostic matériel et logiciel</li>
+          </ul>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
 
-      <div class="card skill-card">
-        <h3>Cybersécurité & analyse réseau</h3>
-        <ul>
-          <li>ARP Spoofing</li>
-          <li>Analyse réseau</li>
-          <li>Sensibilisation cybersécurité</li>
-          <li>Sécurisation des infrastructures</li>
-        </ul>
-      </div>
+        <div class="skill-card">
+          <div class="skill-icon">🔒</div>
+          <h3>Cybersécurité & analyse réseau</h3>
+          <ul>
+            <li>ARP Spoofing</li>
+            <li>Analyse réseau</li>
+            <li>Sensibilisation cybersécurité</li>
+            <li>Sécurisation des infrastructures</li>
+          </ul>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
 
-      <div class="card skill-card">
-        <h3>Automatisation & scripting</h3>
-        <ul>
-          <li>Ansible</li>
-          <li>Playbooks YAML</li>
-          <li>Bash / Shell</li>
-          <li>Automatisation de tâches</li>
-        </ul>
-      </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Automatisation & scripting</h3>
+          <ul>
+            <li>Ansible</li>
+            <li>Playbooks YAML</li>
+            <li>Bash / Shell</li>
+            <li>Automatisation de tâches</li>
+          </ul>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+        </div>
 
-      <div class="card skill-card">
-        <h3>Qualités</h3>
-        <ul>
-          <li>Rigueur</li>
-          <li>Esprit d’analyse</li>
-          <li>Autonomie</li>
-          <li>Travail en équipe</li>
-        </ul>
+        <div class="skill-card">
+          <div class="skill-icon">💡</div>
+          <h3>Qualités</h3>
+          <ul>
+            <li>Rigueur</li>
+            <li>Esprit d'analyse</li>
+            <li>Autonomie</li>
+            <li>Travail en équipe</li>
+          </ul>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCES -->
-  <section id="experiences" class="section section-light">
-    <h2>Expériences professionnelles</h2>
+  <section id="experiences" class="section">
+    <div class="section-container">
+      <div class="section-label reveal">Parcours</div>
+      <h2 class="reveal">Expériences professionnelles</h2>
+      <div class="timeline">
 
-    <div class="experience-card">
-      <h3>01/2026 – 02/2026 · Technicien informatique · Mairie de Taverny</h3>
-      <ul>
-        <li>Automatisation de la configuration de switchs avec Ansible</li>
-        <li>Création et modification de playbooks YAML</li>
-        <li>Tests et validation des configurations automatisées</li>
-      </ul>
-    </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan 2026 – Fév 2026</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>Technicien informatique</h3>
+              <span class="timeline-org">Mairie de Taverny</span>
+            </div>
+            <ul>
+              <li>Automatisation de la configuration de switchs avec Ansible</li>
+              <li>Création et modification de playbooks YAML</li>
+              <li>Tests et validation des configurations automatisées</li>
+            </ul>
+          </div>
+        </div>
 
-    <div class="experience-card">
-      <h3>05/2025 – 07/2025 · Technicien informatique · XEFI Sannois</h3>
-      <ul>
-        <li>Gestion et enregistrement de tickets utilisateurs</li>
-        <li>Installation et configuration de postes clients Windows</li>
-        <li>Pré-visite technique et analyse d’infrastructures réseau</li>
-        <li>Réorganisation de baie de brassage</li>
-      </ul>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Mai 2025 – Juil 2025</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>Technicien informatique</h3>
+              <span class="timeline-org">XEFI Sannois</span>
+            </div>
+            <ul>
+              <li>Gestion et enregistrement de tickets utilisateurs</li>
+              <li>Installation et configuration de postes clients Windows</li>
+              <li>Pré-visite technique et analyse d'infrastructures réseau</li>
+              <li>Réorganisation de baie de brassage</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- FORMATIONS -->
-  <section id="formations" class="section section-light">
-    <h2>Formations</h2>
+  <section id="formations" class="section section-alt">
+    <div class="section-container">
+      <div class="section-label reveal">Cursus</div>
+      <h2 class="reveal">Formations</h2>
+      <div class="formation-grid">
 
-    <div class="formation-grid">
-      <div class="formation-box">
-        <div class="formation-image">BTS</div>
-        <div class="formation-overlay">
-          <h3>BTS SIO – Option SISR</h3>
-          <p>2024 – 2026</p>
-          <p>Administration systèmes, réseaux et cybersécurité</p>
+        <div class="formation-box reveal">
+          <div class="formation-bg">BTS</div>
+          <div class="formation-content">
+            <div class="formation-badge">2024 – 2026</div>
+            <h3>BTS SIO – Option SISR</h3>
+            <p>Administration systèmes, réseaux et cybersécurité</p>
+          </div>
+          <div class="formation-glow"></div>
         </div>
-      </div>
 
-      <div class="formation-box">
-        <div class="formation-image">BAC</div>
-        <div class="formation-overlay">
-          <h3>Baccalauréat</h3>
-          <p>Avant l’entrée en BTS SIO</p>
-          <p>Parcours préparant à la poursuite d’études en informatique</p>
+        <div class="formation-box reveal">
+          <div class="formation-bg">BAC</div>
+          <div class="formation-content">
+            <div class="formation-badge">Obtenu</div>
+            <h3>Baccalauréat</h3>
+            <p>Parcours préparant à la poursuite d'études en informatique</p>
+          </div>
+          <div class="formation-glow"></div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- PROJETS -->
   <section id="projets" class="section">
-    <h2>Projets</h2>
+    <div class="section-container">
+      <div class="section-label reveal">Réalisations</div>
+      <h2 class="reveal">Projets</h2>
 
-  <!-- PROJET 1 : ANSIBLE -->
-
-  <div class="projet">
-
-  <div class="projet-img">
-  <img src="images/ansible.png" alt="Projet Ansible">
-  </div>
-
-  <div class="projet-content">
-
-  <div class="projet-numero">1</div>
-
-  <h3>Automatisation de la configuration de switchs avec Ansible</h3>
-
-  <p>
-  Dans le cadre de mon stage de deuxième année à la Mairie de Taverny, j’ai participé à l’automatisation 
-  de la configuration de switchs réseau à l’aide d’Ansible. L’objectif était de faciliter l’administration du réseau 
-  en créant des playbooks permettant d’exécuter automatiquement certaines configurations sur les équipements. 
-  Pour cela, je me suis appuyé sur la topologie du réseau afin de recenser les différents switchs présents dans l’infrastructure
-  . Afin d’organiser les différentes étapes du projet (découverte de l’environnement, création des playbooks, 
-  tests et validation), un diagramme de Gantt a également été réalisé.
-  </p>
-  <a href="images/gantt_.png" target="_blank">Voir le diagramme de Gantt</a> <br>
-  <a href="images/Topologie réseau.png" target="_blank">Voir topologie réseau</a> <br>
-  <a href="images/ANSIBLE (Documentation).pdf" target="_blank">Voir documentation</a>
-
-  <div class="competences">
-  <strong>Compétences mobilisées :</strong>
-  Gérer le patrimoine informatique, Mettre à disposition des utilisateurs un service informatique, Travailler en mode projet
-  </div>
-
-  </div>
-  </div>
-
-  <div class="projet">
-
-    <div class="projet-img">
-        <img src="images/imprimante_bornewifi.JPEG" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">2</div>
-
-        <h3>Analyse et cartographie de l'infrastructure réseau d'un restaurant</h3>
-
-        <p>
-        Dans le cadre de mon stage chez XEFI, j’ai réalisé une pré-visite technique au sein du restaurant Fresh Burritos 
-        afin d’analyser l’infrastructure réseau existante. L’objectif était d’identifier les équipements, comprendre l’organisation du réseau 
-        et détecter d’éventuelles anomalies. Pour cela, j’ai recensé les équipements (routeurs, switchs, bornes Wi-Fi, TPE, imprimantes) 
-        et analysé leurs connexions. Cette analyse m’a notamment permis d’identifier une boucle réseau ainsi qu’une organisation peu optimisée. 
-        J’ai également participé à la réalisation d’un schéma réseau pour préparer une future intervention technique.
-        </p>
-        <a href="images/Pré-visite Fresh Burritos.pdf" target="_blank">Voir compte rendu intervention</a> <br>
-        <a href="images/Schéma réseau FRESH BURRITOS.pdf" target="_blank">Voir schéma réseau</a> 
-        
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Gérer le patrimoine informatique, Répondre aux incidents et aux demandes d'assistance et d'évolution
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/ansible.png" alt="Projet Ansible">
+          <div class="projet-img-overlay"></div>
         </div>
-
-    </div>
-
-    
-
-</div>
-    
-    <div class="projet">
-
-    <div class="projet-img">
-        <img src="images/siteweb.png" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">3</div>
-
-        <h3>Création d'un site web en HTML et CSS</h3>
-
-        <p>
-        Dans le cadre d’un TP réalisé en première année de BTS SIO, j’ai développé un site web pour une entreprise 
-        fictive appelée Sanaya, spécialisée dans la vente de produits. 
-        L’objectif était de concevoir un site comprenant plusieurs pages (accueil, produits, catégories et fiche produit) 
-        en respectant un cahier des charges.
-        Pour cela, j’ai créé différentes pages HTML reliées entre elles, intégré des images, une fiche descriptive du produit, 
-        une galerie d’images, un tableau comparatif et une section d’avis utilisateurs. Ce projet m’a permis de découvrir 
-        les bases du développement web et la structuration d’un site internet.
-        </p>
-        <a href="https://tuvarankan.github.io/sanaya/" target="_blank">Lien pour visiter la page</a>
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Développer la présence en ligne de l'organisation
+        <div class="projet-content">
+          <div class="projet-numero">01</div>
+          <h3>Automatisation de la configuration de switchs avec Ansible</h3>
+          <p>
+            Dans le cadre de mon stage à la Mairie de Taverny, j'ai participé à l'automatisation
+            de la configuration de switchs réseau à l'aide d'Ansible. Création de playbooks YAML
+            permettant d'exécuter automatiquement certaines configurations sur les équipements.
+          </p>
+          <div class="projet-links">
+            <a href="images/gantt_.png" target="_blank" class="projet-link">📊 Diagramme de Gantt</a>
+            <a href="images/Topologie réseau.png" target="_blank" class="projet-link">🌐 Topologie réseau</a>
+            <a href="images/ANSIBLE (Documentation).pdf" target="_blank" class="projet-link">📄 Documentation</a>
+          </div>
+          <div class="competences">
+            <strong>Compétences :</strong> Gérer le patrimoine informatique · Mettre à disposition un service · Travailler en mode projet
+          </div>
         </div>
+      </div>
 
-    </div>
-
-    
-
-</div>
-
-
-
-<div class="projet">
-
-    <div class="projet-img">
-        <img src="images/stormshield.png" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">4</div>
-
-        <h3>Interconnexion sécurisée de sites et certification Stormshield</h3>
-
-        <p>
-        Dans le cadre de ma formation en BTS SIO, j’ai réalisé un projet d’interconnexion sécurisée entre deux sites.
-        L’objectif était de permettre aux deux réseaux de communiquer entre eux tout en contrôlant et sécurisant les échanges.
-        J’ai donc mis en place une organisation du réseau avec différentes zones, et configuré des règles pour autoriser uniquement les communications nécessaires.
-        Cela permet de limiter les risques de sécurité tout en assurant le bon fonctionnement du réseau.
-
-
-        </p>
-        <a href="images/storm1.png" target="_blank">Voir lab5</a> <br>
-        <a href="images/storm2.png" target="_blank">Voir lab5</a> <br>
-        <a href="images/vpnipsec.png" target="_blank">Voir règle VPN</a> <br>
-        <a href="images/storm_certif.jpeg" target="_blank">Voir entraînement certification</a> <br>
-        
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Mettre à disposition des utilisateurs un service informatique, Organiser son développement professionnel
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/imprimante_bornewifi.JPEG" alt="Projet réseau restaurant">
+          <div class="projet-img-overlay"></div>
         </div>
-
-    </div>
-
-    
-
-</div>
-
-<div class="projet">
-
-    <div class="projet-img">
-        <img src="images/NAS.png" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">5</div>
-
-        <h3>Backup avec un NAS (Synology)</h3>
-
-        <p>
-        Dans le cadre de ma formation en BTS SIO, j’ai réalisé un projet de mise en place d’une solution de sauvegarde avec un NAS.
-        L’objectif était de sécuriser les données de l’entreprise en évitant leur perte en cas de problème.
-        Pour cela, j’ai mis en place des sauvegardes automatiques d’un dossier partagé utilisé par les utilisateurs.
-        Ces sauvegardes sont réalisées de manière régulière afin de garantir la protection des données dans le temps.
-        J’ai également vérifié que les sauvegardes fonctionnaient correctement et qu’il était possible de récupérer les fichiers en cas de besoin.
-        Ce projet m’a permis de comprendre l’importance de la protection des données et de la mise en place de solutions fiables pour assurer la continuité du service.
-
-
-        </p>
-        <a href="images/NAS_compterendu.pdf" target="_blank">Voir compte rendu</a> <br>
-        
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Gérer le patrimoine informatique, Mettre à disposition des utilisateurs un service informatique
+        <div class="projet-content">
+          <div class="projet-numero">02</div>
+          <h3>Analyse et cartographie de l'infrastructure réseau d'un restaurant</h3>
+          <p>
+            Pré-visite technique au sein du restaurant Fresh Burritos chez XEFI. Recensement
+            des équipements, identification d'une boucle réseau et d'une organisation peu optimisée.
+            Réalisation d'un schéma réseau pour préparer l'intervention technique.
+          </p>
+          <div class="projet-links">
+            <a href="images/Pré-visite Fresh Burritos.pdf" target="_blank" class="projet-link">📋 Compte rendu</a>
+            <a href="images/Schéma réseau FRESH BURRITOS.pdf" target="_blank" class="projet-link">🗺️ Schéma réseau</a>
+          </div>
+          <div class="competences">
+            <strong>Compétences :</strong> Gérer le patrimoine informatique · Répondre aux incidents et demandes
+          </div>
         </div>
+      </div>
 
-    </div>
-
-    
-
-</div>
-
-<div class="projet">
-
-    <div class="projet-img">
-        <img src="images/glpi.png" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">6</div>
-
-        <h3>Gestion des incidents et inventaire avec GLPI</h3>
-
-        <p>
-        Dans le cadre de ma formation en BTS SIO, j’ai utilisé l’outil GLPI pour gérer le patrimoine informatique et 
-        les demandes d’assistance. Dans un premier temps, j’ai réalisé un inventaire du parc en recensant différents équipements 
-        (ordinateurs, imprimantes, équipements réseau) et en renseignant leurs caractéristiques dans l’outil. Dans un second temps, 
-        j’ai simulé la gestion de tickets en traitant plusieurs incidents (problème d’impression, perte de connexion réseau, installation de logiciel) 
-        en suivant les étapes de diagnostic et de résolution.
-        Ce travail m’a permis de comprendre le fonctionnement d’un outil de gestion de parc et de support utilisateur en entreprise.
-        
-        </p>
-        <a href="images/TP10 - GLPI (1).pdf" target="_blank">Voir compte rendu (résolution tickets)</a> <br>
-        <a href="images/TP Gestion du Patrimoine Informatique avec GLPI (2026) (1).pdf" target="_blank">Voir compte rendu (inventaire)</a> <br>
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Gérer le patrimoine informatique, Répondre aux incidents et aux demandes d'assistance et d'évolution
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/siteweb.png" alt="Projet site web">
+          <div class="projet-img-overlay"></div>
         </div>
-
-    </div>
-
-    
-
-</div>
-
-<div class="projet">
-
-    <div class="projet-img">
-        <img src="images/Procédure1.jpeg" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">7</div>
-
-        <h3>Installation PC clients</h3>
-
-        <p>
-        Dans le cadre de mon stage chez XEFI, j’ai réalisé l’installation et la préparation de postes clients 
-        suite à un besoin de renouvellement du parc informatique. Cette intervention faisait suite à une demande nécessitant la mise en service 
-        de nouveaux équipements pour les utilisateurs. Pour cela, j’ai suivi une procédure détaillée comprenant la configuration initiale de Windows, 
-        la suppression des logiciels inutiles, l’installation des logiciels nécessaires ainsi que les mises à jour du système. 
-        J’ai également participé au déploiement de plusieurs postes en série, en assurant leur bon fonctionnement avant leur mise à disposition aux utilisateurs.
-        
-        </p>
-        <a href="images/Procédure3.jpeg" target="_blank">Voir les pc</a> <br>
-        <a href="images/PROCEDURE INSTALLATION PC CLIENT.pdf" target="_blank">Voir procédure</a> <br>
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Répondre aux incidents et aux demandes d'assistance et d'évolution, Mettre à disposition des utilisateurs un service informatique
+        <div class="projet-content">
+          <div class="projet-numero">03</div>
+          <h3>Création d'un site web en HTML et CSS</h3>
+          <p>
+            Développement d'un site web pour une entreprise fictive Sanaya en 1ère année de BTS SIO.
+            Plusieurs pages interconnectées (accueil, produits, catégories, fiche produit) en respectant un cahier des charges.
+          </p>
+          <div class="projet-links">
+            <a href="https://tuvarankan.github.io/sanaya/" target="_blank" class="projet-link">🔗 Visiter le site</a>
+          </div>
+          <div class="competences">
+            <strong>Compétence :</strong> Développer la présence en ligne de l'organisation
+          </div>
         </div>
+      </div>
 
-    </div>
-
-    
-
-</div>
-
-<div class="projet">
-
-    <div class="projet-img">
-        <img src="images/affiche.png" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">8</div>
-
-        <h3>Affiche de sensibilisation à la cybersécurité</h3>
-
-        <p>
-        Dans le cadre de mon stage chez XEFI, j’ai réalisé l’installation et la préparation de postes clients 
-        suite à un besoin de renouvellement du parc informatique. Cette intervention faisait suite à une demande nécessitant la mise en service 
-        de nouveaux équipements pour les utilisateurs. Pour cela, j’ai suivi une procédure détaillée comprenant la configuration initiale de Windows, 
-        la suppression des logiciels inutiles, l’installation des logiciels nécessaires ainsi que les mises à jour du système. 
-        J’ai également participé au déploiement de plusieurs postes en série, en assurant leur bon fonctionnement avant leur mise à disposition aux utilisateurs.
-        
-        </p>
-        <a href="images/_Affiche XEFI - Sécurité informatique (1).pdf" target="_blank">Voir affciche</a> <br>
-        
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Répondre aux incidents et aux demandes d'assistance et d'évolution, Mettre à disposition des utilisateurs un service informatique
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/stormshield.png" alt="Stormshield">
+          <div class="projet-img-overlay"></div>
         </div>
-
-    </div>
-
-    
-
-</div>
-
-<div class="projet">
-
-    <div class="projet-img">
-        <img src="images/laforetbaieapres.JPEG" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">9</div>
-
-        <h3>Mise à niveau d'une baie de brassage pour une agence cliente</h3>
-
-        <p>
-        Dans le cadre de mon stage chez XEFI, j’ai réalisé une intervention sur une baie de brassage au sein d’une agence cliente. 
-        L’objectif était d’analyser l’infrastructure réseau existante, d’identifier les équipements présents et de réorganiser 
-        la baie afin d’améliorer la lisibilité, la gestion et la maintenance du réseau. Cette intervention comprenait le remplacement 
-        et l’installation de nouveaux équipements, ainsi que l’optimisation du câblage. Un état avant/après a également été réalisé 
-        afin de documenter les modifications apportées et assurer un meilleur suivi du matériel.
-        
-        </p>
-        <a href="images/LA FORET - INTERVENTION BAIE.pdf" target="_blank">Voir compte rendu intervention</a> <br>
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Répondre aux incidents et aux demandes d'assistance et d'évolution, Mettre à disposition des utilisateurs un service informatique
+        <div class="projet-content">
+          <div class="projet-numero">04</div>
+          <h3>Interconnexion sécurisée de sites et certification Stormshield</h3>
+          <p>
+            Projet d'interconnexion sécurisée entre deux sites en BTS SIO. Mise en place de zones réseau
+            et configuration de règles pour contrôler et sécuriser les échanges inter-sites.
+          </p>
+          <div class="projet-links">
+            <a href="images/storm1.png" target="_blank" class="projet-link">🖼️ Lab 5 (1)</a>
+            <a href="images/storm2.png" target="_blank" class="projet-link">🖼️ Lab 5 (2)</a>
+            <a href="images/vpnipsec.png" target="_blank" class="projet-link">🔐 Règle VPN</a>
+            <a href="images/storm_certif.jpeg" target="_blank" class="projet-link">🏅 Certification</a>
+          </div>
+          <div class="competences">
+            <strong>Compétences :</strong> Gérer le patrimoine informatique · Mettre à disposition un service informatique · Organiser son développement professionnel 
+          </div>
         </div>
+      </div>
 
-    </div>
-
-    
-
-</div>
-
-<div class="projet">
-
-    <div class="projet-img">
-        <img src="images/ninja.png" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">10</div>
-
-        <h3>Gestion des incidents avec NinjaOne </h3>
-
-        <p>
-        Dans le cadre de mon stage chez XEFI, j’ai été amené à gérer des demandes d’assistance utilisateurs via l’outil de ticketing NinjaOne.
-         Les utilisateurs contactaient le support par téléphone pour signaler des incidents (problème Wi-Fi, messagerie, installation de logiciels, etc.), 
-         que j’enregistrais ensuite dans l’outil afin d’assurer le suivi et la traçabilité des demandes. 
-         J’ai également réalisé des actions de support, comme la réinitialisation d’un mot de passe Outlook à la demande d’un utilisateur, 
-         en lui communiquant les nouvelles informations de connexion. Cette activité m’a permis de participer au processus de gestion des incidents 
-         et d’assistance aux utilisateurs.
-        
-        </p>
-        <a href="images/ticket1.png" target="_blank">Voir ticket1</a> 
-        <a href="images/ticket2.png" target="_blank">Voir ticket2</a>
-        <a href="images/tikcet3.png" target="_blank">Voir ticket3</a>
-        <a href="images/tikcet4.png" target="_blank">Voir tikcet4</a>
-        <a href="images/résolution.png" target="_blank">Voir résolution</a> 
-        
-        
-        
-
-        
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Répondre aux incidents et aux demandes d'assistance et d'évolution
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/NAS.png" alt="NAS Synology">
+          <div class="projet-img-overlay"></div>
         </div>
-
-    </div>
-
-
-    
-
-    
-
-</div>
-
-<div class="projet">
-
-    <div class="projet-img">
-        <img src="images/Supervision_poste.png" alt="Projet">
-    </div>
-
-    <div class="projet-content">
-
-        <div class="projet-numero">11</div>
-
-        <h3>Supervision avec Zabbix</h3>
-
-        <p>
-        Dans le cadre de ma formation en BTS SIO, j’ai réalisé un projet d’installation et de configuration d’un outil de supervision. 
-        L’objectif était de surveiller une machine afin de détecter d’éventuels problèmes.
-        Pour cela, j’ai mis en place une solution permettant de suivre l’état d’un poste depuis une interface de supervision. 
-        Cela permet de voir rapidement si la machine fonctionne correctement ou si un problème apparaît.
-        J’ai également vérifié que les informations remontaient bien dans l’interface et que la supervision était fonctionnelle.
-        Ce projet m’a permis de comprendre l’importance de la surveillance des équipements pour détecter rapidement les problèmes et réagir efficacement.
-        
-        </p>
-        <a href="images/TP - Installation et configuration de Zabbix sur Ubuntu.pdf" target="_blank">Voir installation</a> 
-        
-        
-
-        <div class="competences">
-            <strong>Compétence mobilisée :</strong>
-            Gérer le patrimoine informatique, Mettre à disposition des utilisateurs un service informatique
+        <div class="projet-content">
+          <div class="projet-numero">05</div>
+          <h3>Backup avec un NAS (Synology)</h3>
+          <p>
+            Mise en place d'une solution de sauvegarde avec un NAS Synology. Configuration de sauvegardes
+            automatiques d'un dossier partagé et validation de la restauration des fichiers.
+          </p>
+          <div class="projet-links">
+            <a href="images/NAS_compterendu.pdf" target="_blank" class="projet-link">📄 Compte rendu</a>
+          </div>
+          <div class="competences">
+            <strong>Compétences :</strong> Gérer le patrimoine informatique · Mettre à disposition un service informatique
+          </div>
         </div>
+      </div>
+
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/glpi.png" alt="GLPI">
+          <div class="projet-img-overlay"></div>
+        </div>
+        <div class="projet-content">
+          <div class="projet-numero">06</div>
+          <h3>Gestion des incidents et inventaire avec GLPI</h3>
+          <p>
+            Utilisation de GLPI pour la gestion du patrimoine informatique : inventaire du parc
+            (ordinateurs, imprimantes, réseau) et simulation de gestion de tickets avec diagnostic et résolution.
+          </p>
+          <div class="projet-links">
+            <a href="images/TP10 - GLPI (1).pdf" target="_blank" class="projet-link">🎫 Résolution tickets</a>
+            <a href="images/TP Gestion du Patrimoine Informatique avec GLPI (2026) (1).pdf" target="_blank" class="projet-link">📦 Inventaire</a>
+          </div>
+          <div class="competences">
+            <strong>Compétences :</strong> Gérer le patrimoine informatique · Répondre aux incidents et demandes
+          </div>
+        </div>
+      </div>
+
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/Procédure1.jpeg" alt="Installation PC">
+          <div class="projet-img-overlay"></div>
+        </div>
+        <div class="projet-content">
+          <div class="projet-numero">07</div>
+          <h3>Installation PC clients</h3>
+          <p>
+            Installation et préparation de postes clients chez XEFI suite à un renouvellement du parc.
+            Configuration Windows, suppression des logiciels inutiles, installation des logiciels nécessaires et mises à jour.
+          </p>
+          <div class="projet-links">
+            <a href="images/Procédure3.jpeg" target="_blank" class="projet-link">🖥️ Voir les PC</a>
+            <a href="images/PROCEDURE INSTALLATION PC CLIENT.pdf" target="_blank" class="projet-link">📋 Procédure</a>
+          </div>
+          <div class="competences">
+            <strong>Compétences :</strong> Mettre à disposition un service informatique
+          </div>
+        </div>
+      </div>
+
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/affiche.png" alt="Affiche cybersécurité">
+          <div class="projet-img-overlay"></div>
+        </div>
+        <div class="projet-content">
+          <div class="projet-numero">08</div>
+          <h3>Affiche de sensibilisation à la cybersécurité</h3>
+          <p>
+            Réalisation d'une affiche de sensibilisation à la cybersécurité chez XEFI,
+            visant à informer les utilisateurs sur les bonnes pratiques de sécurité informatique en entreprise.
+          </p>
+          <div class="projet-links">
+            <a href="images/_Affiche XEFI - Sécurité informatique (1).pdf" target="_blank" class="projet-link">📄 Voir l'affiche</a>
+          </div>
+          <div class="competences">
+            <strong>Compétences :</strong> Mettre à disposition un service informatique
+          </div>
+        </div>
+      </div>
+
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/laforetbaieapres.JPEG" alt="Baie de brassage">
+          <div class="projet-img-overlay"></div>
+        </div>
+        <div class="projet-content">
+          <div class="projet-numero">09</div>
+          <h3>Mise à niveau d'une baie de brassage pour une agence cliente</h3>
+          <p>
+            Intervention sur une baie de brassage chez une agence cliente : analyse de l'infrastructure,
+            remplacement et installation de nouveaux équipements, optimisation du câblage avec état avant/après.
+          </p>
+          <div class="projet-links">
+            <a href="images/LA FORET - INTERVENTION BAIE.pdf" target="_blank" class="projet-link">📋 Compte rendu</a>
+          </div>
+          <div class="competences">
+            <strong>Compétences :</strong> Gérer le patrimoine informatique · Répondre aux incidents  
+          </div>
+        </div>
+      </div>
+
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/ninja.png" alt="NinjaOne">
+          <div class="projet-img-overlay"></div>
+        </div>
+        <div class="projet-content">
+          <div class="projet-numero">10</div>
+          <h3>Gestion des incidents avec NinjaOne</h3>
+          <p>
+            Gestion de demandes d'assistance via NinjaOne chez XEFI : enregistrement d'incidents
+            (Wi-Fi, messagerie, logiciels), suivi des tickets et support (réinitialisation mots de passe Outlook).
+          </p>
+          <div class="projet-links">
+            <a href="images/ticket1.png" target="_blank" class="projet-link">🎫 Ticket 1</a>
+            <a href="images/ticket2.png" target="_blank" class="projet-link">🎫 Ticket 2</a>
+            <a href="images/tikcet3.png" target="_blank" class="projet-link">🎫 Ticket 3</a>
+            <a href="images/tikcet4.png" target="_blank" class="projet-link">🎫 Ticket 4</a>
+            <a href="images/résolution.png" target="_blank" class="projet-link">✅ Résolution</a>
+          </div>
+          <div class="competences">
+            <strong>Compétence :</strong> Répondre aux incidents et aux demandes d'assistance et d'évolution
+          </div>
+        </div>
+      </div>
+
+      <div class="projet reveal">
+        <div class="projet-img">
+          <img src="images/Supervision_poste.png" alt="Zabbix">
+          <div class="projet-img-overlay"></div>
+        </div>
+        <div class="projet-content">
+          <div class="projet-numero">11</div>
+          <h3>Supervision avec Zabbix</h3>
+          <p>
+            Installation et configuration de Zabbix pour surveiller une machine et détecter d'éventuels problèmes.
+            Vérification des remontées dans l'interface et validation du bon fonctionnement de la supervision.
+          </p>
+          <div class="projet-links">
+            <a href="images/TP - Installation et configuration de Zabbix sur Ubuntu.pdf" target="_blank" class="projet-link">📄 Documentation</a>
+          </div>
+          <div class="competences">
+            <strong>Compétences :</strong> Gérer le patrimoine informatique · Mettre à disposition un service informatique
+          </div>
+        </div>
+      </div>
 
     </div>
-
-
-    
-
-    
-
-</div>
-
-
-
-    
   </section>
 
   <!-- VEILLES -->
-<section id="veilles" class="section">
-  <h2>Veilles technologiques</h2>
+  <section id="veilles" class="section section-alt">
+    <div class="section-container">
+      <div class="section-label reveal">Actualités</div>
+      <h2 class="reveal">Veilles technologiques</h2>
+      <div class="veilles-grid">
 
-  <div class="projet">
+        <div class="veille-card reveal">
+          <div class="veille-img">
+            <img src="images/panne_aws.png" alt="Panne AWS">
+            <div class="veille-num">01</div>
+          </div>
+          <div class="veille-content">
+            <h3>Panne AWS</h3>
+            <p>
+              Veille sur une panne majeure d'AWS survenue en 2025, ayant impacté de nombreux services
+              (Canva, Amazon...). Analyse des risques liés au cloud et de l'importance de la continuité de service.
+            </p>
+            <a href="https://www.it-connect.fr/panne-majeure-aws-20-octobre-2025-impact-services-populaires/" class="veille-link" target="_blank">Lire l'article →</a>
+          </div>
+        </div>
 
-    <div class="projet-img">
-      <img src="images/panne_aws.png" alt="Veille">
-    </div>
+        <div class="veille-card reveal">
+          <div class="veille-img">
+            <img src="images/wserver_faille.png" alt="Faille Windows Server">
+            <div class="veille-num">02</div>
+          </div>
+          <div class="veille-content">
+            <h3>Faille Windows Server</h3>
+            <p>
+              Failles critiques Windows Server corrigées par Microsoft en 2025, permettant à un attaquant
+              de prendre le contrôle d'un serveur. Importance des mises à jour de sécurité.
+            </p>
+            <a href="https://cert.europa.eu/publications/security-advisories/2025-040/" class="veille-link" target="_blank">Lire l'article →</a>
+          </div>
+        </div>
 
-    <div class="projet-content">
+        <div class="veille-card reveal">
+          <div class="veille-img">
+            <img src="images/faille_aruba.png" alt="Faille Aruba">
+            <div class="veille-num">03</div>
+          </div>
+          <div class="veille-content">
+            <h3>Faille Aruba AOS-CX</h3>
+            <p>
+              Faille critique 2026 permettant de prendre le contrôle d'un switch Aruba sans authentification.
+              En lien direct avec mon stage où j'ai configuré ces équipements.
+            </p>
+            <a href="https://www.it-connect.fr/acces-admin-ouvert-a-tous-hpe-alerte-sur-cette-faille-dans-aruba-aos-cx/" class="veille-link" target="_blank">Lire l'article →</a>
+          </div>
+        </div>
 
-      <div class="projet-numero">1</div>
+        <div class="veille-card reveal">
+          <div class="veille-img">
+            <img src="images/ransomware_veille.png" alt="Ransomware">
+            <div class="veille-num">04</div>
+          </div>
+          <div class="veille-content">
+            <h3>Reprise des attaques ransomware en France</h3>
+            <p>
+              Reprise des attaques ransomware en France en 2025 selon LeMagIT (2026) :
+              cyberattaques en augmentation, importance des sauvegardes et de la sécurisation des systèmes.
+            </p>
+            <a href="https://www.lemagit.fr/actualites/366636811/Ransomware-2025-lannee-de-la-reprise-en-France?" class="veille-link" target="_blank">Lire l'article →</a>
+          </div>
+        </div>
 
-      <h3>Panne AWS</h3>
-
-      <p>
-        Dans le cadre de ma formation, j’ai réalisé une veille informatique sur une panne majeure d’AWS survenue en 2025.
-        Cette panne a impacté de nombreux services utilisés au quotidien, comme Canva ou Amazon.
-        Cela m’a permis de comprendre les risques liés au cloud et l’importance de la continuité de service.
-      </p>
-
-      <a href="https://www.it-connect.fr/panne-majeure-aws-20-octobre-2025-impact-services-populaires/">Voir source</a>
-
-
-    </div>
-  </div>
-
-  <div class="projet">
-
-    <div class="projet-img">
-      <img src="images/wserver_faille.png" alt="Veille">
-    </div>
-
-    <div class="projet-content">
-
-      <div class="projet-numero">2</div>
-
-      <h3>Faille Windows Server</h3>
-
-      <p>
-        Dans le cadre de ma veille, je me suis intéressé aux failles de sécurité sur Windows Server.
-        En 2025, Microsoft a corrigé plusieurs vulnérabilités importantes pouvant permettre à un attaquant de prendre le contrôle d’un serveur.
-        Cela m’a permis de comprendre l’importance des mises à jour pour sécuriser les systèmes informatiques.
-      </p>
-
-      <a href="https://cert.europa.eu/publications/security-advisories/2025-040/">Voir source</a>
-
-
-    </div>
-  </div>
-
-
-
-  <div class="projet">
-
-    <div class="projet-img">
-      <img src="images/faille_aruba.png" alt="Veille">
-    </div>
-
-    <div class="projet-content">
-
-      <div class="projet-numero">3</div>
-
-      <h3>Faille Aruba AOS-CX</h3>
-
-      <p>
-      Dans le cadre de ma veille informatique, je me suis intéressé à une faille critique publiée en 2026 sur les équipements Aruba. 
-      Cette vulnérabilité permettrait à un attaquant de prendre le contrôle d’un switch sans authentification. 
-      Cette veille m’a permis de comprendre l’importance de sécuriser les accès et d’appliquer les mises à jour. 
-      Elle est en lien direct avec mon stage, où j’ai configuré ces équipements.
-      </p>
-
-      <a href="https://www.it-connect.fr/acces-admin-ouvert-a-tous-hpe-alerte-sur-cette-faille-dans-aruba-aos-cx/">Voir source</a>
-
-
-    </div>
-  </div>
-
-  <div class="projet">
-
-    <div class="projet-img">
-      <img src="images/ransomware_veille.png" alt="Veille">
-    </div>
-
-    <div class="projet-content">
-
-      <div class="projet-numero">4</div>
-
-      <h3>Reprise des attaques ransomware en France</h3>
-
-      <p>
-      Dans le cadre de ma veille informatique, je me suis intéressé à la reprise des attaques ransomware en France en 2025. 
-      Selon un article du site LeMagIT publié en 2026, ces cyberattaques sont en augmentation et représentent une menace importante pour les entreprises. 
-      Cela m’a permis de comprendre l’importance des sauvegardes et de la sécurisation des systèmes.
-      </p>
-
-      <a href="https://www.lemagit.fr/actualites/366636811/Ransomware-2025-lannee-de-la-reprise-en-France?">Voir source</a>
-
-
-    </div>
-  </div>
-
-</section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section section-light">
-    <h2>Contact</h2>
-
-    <div class="card contact-card">
-      <p><strong>Email :</strong> tuvarankan@gmail.com</p>
-      <p>
-        <strong>LinkedIn :</strong>
-        <a href="https://www.linkedin.com/in/tuvarankan-thavendran/" target="_blank">Voir mon profil</a>
-      </p>
+      </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-container">
+      <div class="section-label reveal">Restons en contact</div>
+      <h2 class="reveal">Contact</h2>
+      <div class="contact-wrapper reveal">
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <h3>Email</h3>
+          <a href="mailto:tuvarankan@gmail.com">tuvarankan@gmail.com</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">💼</div>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/tuvarankan-thavendran/" target="_blank">Voir mon profil →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Tuvarankan THAVENDRAN — BTS SIO SISR</p>
+  </footer>
+
+  <script>
+    // ===== PARTICLES =====
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', () => { resizeCanvas(); particles = []; for (let i = 0; i < 80; i++) particles.push(new Particle()); });
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 1.8 + 0.4;
+        this.speedX = (Math.random() - 0.5) * 0.45;
+        this.speedY = (Math.random() - 0.5) * 0.45;
+        this.opacity = Math.random() * 0.55 + 0.1;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0,212,255,${this.opacity})`;
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 80; i++) particles.push(new Particle());
+
+    function connectParticles() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 130) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(0,212,255,${0.14 * (1 - dist / 130)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      connectParticles();
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // ===== TYPING EFFECT =====
+    const texts = ['Systèmes & Réseaux', 'Cybersécurité', 'Automatisation IT', 'Administration Réseau'];
+    let tIdx = 0, cIdx = 0, deleting = false;
+    const typedEl = document.getElementById('typed');
+
+    function type() {
+      const current = texts[tIdx];
+      if (deleting) {
+        typedEl.textContent = current.substring(0, cIdx--);
+        if (cIdx < 0) { deleting = false; tIdx = (tIdx + 1) % texts.length; setTimeout(type, 500); return; }
+      } else {
+        typedEl.textContent = current.substring(0, cIdx++);
+        if (cIdx > current.length) { deleting = true; setTimeout(type, 2200); return; }
+      }
+      setTimeout(type, deleting ? 45 : 75);
+    }
+    setTimeout(type, 800);
+
+    // ===== SCROLL REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ===== SKILL BARS =====
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const fill = e.target.querySelector('.skill-fill');
+          if (fill) { setTimeout(() => { fill.style.width = fill.dataset.width + '%'; }, 200); }
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.skill-card').forEach(el => barObserver.observe(el));
+
+    // ===== COUNTER ANIMATION =====
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          document.querySelectorAll('.stat-num').forEach(el => {
+            const target = +el.dataset.target;
+            let count = 0;
+            const step = target / 45;
+            const update = () => {
+              count += step;
+              if (count < target) { el.textContent = Math.ceil(count); requestAnimationFrame(update); }
+              else el.textContent = target;
+            };
+            update();
+          });
+          counterObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    const statsEl = document.querySelector('.hero-stats');
+    if (statsEl) counterObserver.observe(statsEl);
+
+    // ===== NAVBAR =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+      document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 400);
+    });
+
+    // ===== HAMBURGER =====
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('active');
+      });
+    });
+
+    // ===== SCROLL TOP =====
+    document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
 </html>
