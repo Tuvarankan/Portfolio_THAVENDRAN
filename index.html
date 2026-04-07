@@ -634,7 +634,46 @@
 
   <footer class="footer">
     <p>© 2026 Tuvarankan THAVENDRAN — BTS SIO SISR</p>
+    <p style="margin-top:10px;"><button class="mentions-btn" id="openMentions">Mentions légales</button></p>
   </footer>
+
+  <!-- MODAL MENTIONS LÉGALES -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <button class="modal-close" id="closeMentions">✕</button>
+      <h2>Mentions légales</h2>
+
+      <div class="modal-section">
+        <h3>Éditeur du site</h3>
+        <p>Ce site est un portfolio personnel réalisé dans le cadre du BTS Services Informatiques aux Organisations (SIO), option SISR.</p>
+        <p><strong>Responsable de publication :</strong> Tuvarankan THAVENDRAN</p>
+        <p><strong>Email :</strong> <a href="mailto:tuvarankan@gmail.com">tuvarankan@gmail.com</a></p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Hébergement</h3>
+        <p><strong>Hébergeur :</strong> GitHub Pages</p>
+        <p><strong>Société :</strong> GitHub, Inc.</p>
+        <p><strong>Adresse :</strong> 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</p>
+        <p><strong>Site :</strong> <a href="https://pages.github.com" target="_blank">pages.github.com</a></p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Propriété intellectuelle</h3>
+        <p>L'ensemble du contenu de ce site (textes, images, documents) est la propriété de Tuvarankan THAVENDRAN, sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Données personnelles</h3>
+        <p>Ce site ne collecte aucune donnée personnelle. Aucun cookie de traçage ou formulaire de collecte de données n'est utilisé. Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant : <a href="mailto:tuvarankan@gmail.com">tuvarankan@gmail.com</a>.</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Liens externes</h3>
+        <p>Ce site peut contenir des liens vers des sites tiers. Tuvarankan THAVENDRAN ne saurait être tenu responsable du contenu de ces sites externes.</p>
+      </div>
+    </div>
+  </div>
 
   <script>
     // ===== PARTICLES =====
@@ -778,6 +817,12 @@
 
     // ===== SCROLL TOP =====
     document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== MENTIONS LÉGALES =====
+    const overlay = document.getElementById('modalOverlay');
+    document.getElementById('openMentions').addEventListener('click', () => { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; });
+    document.getElementById('closeMentions').addEventListener('click', () => { overlay.classList.remove('open'); document.body.style.overflow = ''; });
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) { overlay.classList.remove('open'); document.body.style.overflow = ''; } });
   </script>
 </body>
 </html>
