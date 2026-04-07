@@ -777,6 +777,7 @@ body {
   inset: 0;
   background: rgba(0,0,0,0.75);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -788,7 +789,7 @@ body {
 }
 .modal-overlay.open {
   opacity: 1;
-  pointer-events: all;
+  pointer-events: auto;
 }
 .modal-box {
   background: #0d1829;
@@ -854,6 +855,7 @@ body {
   line-height: 1.75;
   margin-bottom: 6px;
 }
+.modal-section strong { color: var(--text-bright); }
 .modal-section a { color: var(--cyan); text-decoration: none; }
 .modal-section a:hover { text-decoration: underline; }
 
